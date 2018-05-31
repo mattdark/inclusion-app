@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./assets/leaflet/leaflet.css"/>
+    <script src="./assets/leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="./assets/data/escuelas.json"></script>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.4/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.4/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.4/js/uikit-icons.min.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <nav class="uk-navbar uk-navbar-container uk-navbar-transparent uk-margin-left uk-margin-right">
+      <a class="uk-navbar-item uk-logo" href="#">Inclusión-App</a>
+      <div class="uk-navbar-right">
+        <a href="#offcanvas-slide" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #menu"></a>
+      </div>
+    </nav>
+    <div id="menu" uk-offcanvas="flip: true; overlay: true; mode: slide">
+      <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-default" uk-switcher="connect: #component-nav; animation: uk-animation-fade; toggle: > :not(.uk-nav-header)">
+	  <li><a href="#">Inicio</a></li>
+	  <li><a href="#">Mapa</a></li>
+	  <li><a href="#">Multimedia</a></li>
+	  <li><a href="#">Contacto</a></li>
+	</ul>
+      </div>
+    </div>
+    <div class="uk-container uk-container-expand">
+      <div class="uk-container uk-container-expand">
+        <!-- This is a button toggling the modal with the outside close button -->
+        <div id="descripcion" uk-modal>
+          <div class="uk-modal-dialog uk-modal-body">
+            <button class="uk-modal-close-outside" type="button" uk-close></button>
+            <p>
+              <ul class="uk-tab" data-uk-tab="{connect:'#my-id'}">
+                <li><a href="">Información</a></li>
+                <li><a href="">Ficha de inclusión</a></li>
+                <li><a href="">Comentarios</a></li>
+              </ul>
+              <ul id="my-id" class="uk-switcher uk-margin">
+              <li><a href="#" id="autoplayer" data-uk-switcher-item="next"></a>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span style="float: right;"><i class="fa fa-thumbs-up">(0)</i><i class="fa fa-thumbs-down">(0)</i></span><br><br>
+                <span><h5>Nombre Escuela</h5><i id="nombre"></i></span>
+                <span><h5>Dirección</h5><i id="direccion"></i></span>
+                <span><h5>Teléfono</h5><i id="telefono"></i></span>
+                <span><h5>Correo</h5><i id="correo"></i></span>
+                <span><h5>Sitio Web</h5><i id="sitio"></i></span>
+                <p style="text-align: center;"><img src="./assets/img/notavailable.png" style="width: 60%; height: auto;"></p>
+              </li>
+              <li>
+                <p style="text-align: justify">En esta <b>Ficha de Inclusión</b> encontrará los criterios considerados para determinar si una institución es incluyente. Si quieres más información da click en el siguiente enlace: <a href="#">Marco Teórico</a></b></p>
+                <p>
+                  <input type="checkbox">USAER
+                  <input type="checkbox">Rampas
+                  <input type="checkbox">Psicólogos
+                </p>
+              </li>
+              <li>Content 3</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div id="mapid" class="uk-width-1-1"></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+  </body>
+</html>

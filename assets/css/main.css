@@ -1,0 +1,11 @@
+html, body {
+  height: 100%;
+}
+#mapid {
+  width: 100vw;
+  height: 80vh;
+}
+
+.checked {
+    color: orange;
+}
