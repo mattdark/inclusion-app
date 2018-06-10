@@ -19,7 +19,7 @@
   </head>
   <body>
     <nav class="uk-navbar uk-navbar-container uk-navbar-transparent uk-margin-left uk-margin-right">
-      <a class="uk-navbar-item uk-logo" href="#">Inclusión-App</a>
+      <a class="uk-navbar-item uk-logo" href="#">incluYendo</a>
       <div class="uk-navbar-right">
         <a href="#offcanvas-slide" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #menu"></a>
       </div>
@@ -27,56 +27,126 @@
     <div id="menu" uk-offcanvas="flip: true; overlay: true; mode: slide">
       <div class="uk-offcanvas-bar">
         <ul class="uk-nav uk-nav-default" uk-switcher="connect: #component-nav; animation: uk-animation-fade; toggle: > :not(.uk-nav-header)">
-	  <li><a href="#">Inicio</a></li>
-	  <li><a href="#">Mapa</a></li>
-	  <li><a href="#">Multimedia</a></li>
-	  <li><a href="#">Contacto</a></li>
-	</ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Mapa</a></li>
+          <li><a href="#">Multimedia</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
       </div>
     </div>
     <div class="uk-container uk-container-expand">
-      <div class="uk-container uk-container-expand">
-        <!-- This is a button toggling the modal with the outside close button -->
-        <div id="descripcion" uk-modal>
-          <div class="uk-modal-dialog uk-modal-body">
-            <button class="uk-modal-close-outside" type="button" uk-close></button>
-            <p>
-              <ul class="uk-tab" data-uk-tab="{connect:'#my-id'}">
-                <li><a href="">Información</a></li>
-                <li><a href="">Ficha de inclusión</a></li>
-                <li><a href="">Comentarios</a></li>
-              </ul>
-              <ul id="my-id" class="uk-switcher uk-margin">
-              <li><a href="#" id="autoplayer" data-uk-switcher-item="next"></a>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span style="float: right;"><i class="fa fa-thumbs-up">(0)</i><i class="fa fa-thumbs-down">(0)</i></span><br><br>
-                <span><h5>Nombre Escuela</h5><i id="nombre"></i></span>
-                <span><h5>Dirección</h5><i id="direccion"></i></span>
-                <span><h5>Teléfono</h5><i id="telefono"></i></span>
-                <span><h5>Correo</h5><i id="correo"></i></span>
-                <span><h5>Sitio Web</h5><i id="sitio"></i></span>
-                <p style="text-align: center;"><img src="./assets/img/notavailable.png" style="width: 60%; height: auto;"></p>
-              </li>
-              <li>
-                <p style="text-align: justify">En esta <b>Ficha de Inclusión</b> encontrará los criterios considerados para determinar si una institución es incluyente. Si quieres más información da click en el siguiente enlace: <a href="#">Marco Teórico</a></b></p>
-                <p>
-                  <input type="checkbox">USAER
-                  <input type="checkbox">Rampas
-                  <input type="checkbox">Psicólogos
-                </p>
-              </li>
-              <li>Content 3</li>
-              </ul>
+      <ul id="component-nav" class="uk-switcher">
+        <li>
+          <div class="uk-container uk-container-expand">
+            <span style="text-align: center;">
+              <h3>Ubica los espacios inclusivos que están cerca de ti</h3>
+            </span>
+            <div style="margin: 0 auto; width: 65%;">
+              <p style="text-align: justify;"><b>incluYendo</b> es un proyecto desarrollado en el <b>1<sup>er</sup> Laboratorio Ciudadano de Inclusión</b> realizado en la ciudad de Mérida, Yucatán del 27 de Mayo al 2 de Junio de 2018. El objetivo del proyecto es proporcionar una aplicación confiable en la cual se puedan identificar los espacios educativos que nos permitan fomentar una cultura inclusiva.</p>
+            </div>
+            <p style="text-align: center;">
+              <img data-src="./assets/img/incluyendo.png" width="30%" height="30%" alt="Logo de incluYendo" uk-img>
+            </p>
+            <p style="text-align: center;">
+              <button class="button" id="mapbutton">Ir al mapa</button>
             </p>
           </div>
-        </div>
-        <div id="mapid" class="uk-width-1-1"></div>
-      </div>
+        </li>
+        <li>
+          <div class="uk-container uk-container-expand">
+            <div id="mapid" class="uk-width-1-1"></div>
+            <div id="descripcion" uk-modal>
+              <div class="uk-modal-dialog uk-modal-body">
+                <!-- This is a button toggling the modal with the outside close button -->
+                <button class="uk-modal-close-outside" type="button" uk-close></button>
+                <p>
+                  <ul class="uk-tab" data-uk-tab="{connect:'#my-id'}">
+                    <li><a href="">Información</a></li>
+                    <li><a href="">Ficha de inclusión</a></li>
+                    <li><a href="">Comentarios</a></li>
+                  </ul>
+                  <ul id="my-id" class="uk-switcher uk-margin">
+                    <li><a href="#" id="autoplayer" data-uk-switcher-item="next"></a>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                      <span style="float: right;"><i class="fa fa-thumbs-up">(0)</i><i class="fa fa-thumbs-down">(0)</i></span><br><br>
+                      <span><h5>Nombre Escuela</h5><i id="nombre"></i></span>
+                      <span><h5>Dirección</h5><i id="direccion"></i></span>
+                      <span><h5>Teléfono</h5><i id="telefono"></i></span>
+                      <span><h5>Correo</h5><i id="correo"></i></span>
+                      <span><h5>Sitio Web</h5><i id="sitio"></i></span>
+                      <p style="text-align: center;"><img src="./assets/img/notavailable.png" style="width: 60%; height: auto;"></p>
+                    </li>
+                    <li>
+                      <span><i id="nombre2"></i></span>
+                      <div class="row">
+                        <div class="middle">
+                          <div class="bar-container">
+                            <div class="bar-4"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <p style="text-align: justify">En esta <b>Ficha de Inclusión</b> encontrará los criterios considerados para determinar si una institución es incluyente. Si quieres más información da click en el siguiente enlace: <a href="#">Marco Teórico</a></b></p>
+                      <div class="row">
+                        <div class="middle">
+                          <div class="bar-container">
+                            <div class="bar-3"></div>
+                          </div>
+                        </div>
+                        <div class="side right">
+                          <div>17%</div>
+                        </div>
+                        <div class="middle">
+                          <div class="bar-container">
+                            <div class="bar-2"></div>
+                          </div>
+                        </div>
+                        <div class="side right">
+                          <div>71%</div>
+                        </div>
+                        <div class="middle">
+                          <div class="bar-container">
+                            <div class="bar-1"></div>
+                          </div>
+                        </div>
+                        <div class="side right">
+                          <div>49%</div>
+                        </div>
+                      </div><br>
+                      <div id="square1" style="float: left;">
+                      </div><div style="float: right;">Barreras Arquitectónicas</div><br>
+                      <div id="square2" style="float: left;">
+                      </div><div style="float: right;">Barreras Sociales</div><br>
+                      <div id="square3" style="float: left;">
+                      </div><div style="float: right;">Barreras Actitudinales</div>
+                    </li>
+                    <li>
+                      <p style="text-align: center"><h3>Tu calificación es importante</h3></p>
+                      <div class="rating">
+                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                      </div>
+                      <br>
+                      <span style="float: left;"><h4>Comentarios</h4></span><span style="float: right;"><i class="fa fa-thumbs-up liking" style="font-size: 25px; padding: 10px;">  </i><i class="fa fa-thumbs-down liking" style="font-size: 25px;"></i></span>
+                      <br>
+                      <p>
+                        <textarea class="comment"></textarea>
+                      </p>
+                      <p style="text-align: right;">
+                        <button class="button" id="mapbutton">Agregar comentario</button>
+                      </p>
+                      <!--<span><h4>Comentarios de otras personas</h4></span>-->
+                    </li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+          <script type="text/javascript" src="./assets/js/main.js"></script>
+        </li>
+      </ul>
     </div>
-    <script type="text/javascript" src="./assets/js/main.js"></script>
   </body>
 </html>
